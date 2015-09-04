@@ -1,0 +1,111 @@
+ul.documentation-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0 0;
+  li {
+    list-style: none;
+    display: block;
+    margin: 0 4px 0 0;
+    padding: 10px 15px;
+    float: left;
+    background: #ddd;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    &.on {
+      background: #0074a2;
+      color: #fff;
+    }
+  }
+}
+
+.documentation-files {
+  padding-bottom: 80px;
+  .file {
+    display: none;
+    // padding: 10px 20px 0 0;
+    clear: both;
+    font-size: 16px;
+    &.on {
+      display: block;
+    }
+  }
+  .file-toc {
+    // padding: 40px 0 0 0;
+    // width: 20%;
+    // float: left;
+    &.hidden {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      margin: 40px 0 0 0;
+    }
+    li {
+      list-style: none;
+      margin: 0 0 4px 0;
+      padding: 10px 15px;
+      background: #ddd;
+      cursor: pointer;
+      &.on {
+        background: #888;
+        color: #fff;
+      }
+    }
+  }
+  .file-parts {
+    // width: 80%;
+    // max-width: 700px;
+    // float: left;
+  }
+  .part {
+    display: none;
+    &.on {
+      display: block;
+    }
+    
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+    
+    h1 {
+      margin-top: 40px;
+      line-height: 1;
+      /*display: none;*/
+    }
+    h2 {
+      margin: 40px 0 10px 0;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    h3 {
+      margin: 40px 0 10px 0;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    p,
+    li,
+    code {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    p,
+    li {
+      margin-bottom: 12px;
+    }
+    ul,
+    ol {
+      margin: 6px 0 20px 40px;
+    }
+    ul {
+      list-style: disc;
+    }
+    ol {
+      list-style: decimal;
+    }
+    ul ul,
+    ol ul {
+      list-style: circle;
+    }
+  }
+}
