@@ -20,33 +20,8 @@ require_once realpath(__DIR__.'/../vendor/autoload.php');
 */
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('ENVIRONMENT_DEV', 'dev');
-define('ENVIRONMENT_STAGE', 'stage');
-define('ENVIRONMENT_PROD', 'prod');
-if(preg_match('/(localhost|\.dev)/', $_SERVER['HTTP_HOST'])) {
-  define('ENVIRONMENT', ENVIRONMENT_DEV);
-  define('DB_USER',     'root');
-  define('DB_PASSWORD', 'root');
-  define('DB_HOST',     'localhost');
-  define('DB_NAME',     'taco_bp_2015');
-  define('SAVEQUERIES', true);
-} elseif(preg_match('/(.vermilion.com)/', $_SERVER['HTTP_HOST'])) {
-  define('ENVIRONMENT', ENVIRONMENT_STAGE);
-  define('DB_USER',     'user');
-  define('DB_PASSWORD', 'password');
-  define('DB_HOST',     'localhost');
-  define('DB_NAME',     'taco_bp_2015');
-  define('SAVEQUERIES', true);
-} else {
-  define('ENVIRONMENT', ENVIRONMENT_PROD);
-  define('DB_USER',     'user');
-  define('DB_PASSWORD', 'password');
-  define('DB_HOST',     'hostname');
-  define('DB_NAME',     'taco_bp_2015');
-}
+include __DIR__.'../../db.php';
 
-// keep db details of the repo on a .gitignored file
-//include __DIR__.'/incl-head.php';
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
